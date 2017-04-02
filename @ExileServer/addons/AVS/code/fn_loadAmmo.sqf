@@ -1,5 +1,5 @@
 /*
-© 2015 Zenix Gaming Ops
+Â© 2015 Zenix Gaming Ops
 Developed by Rod-Serling
 Co-Developed by Vishpala
 
@@ -32,7 +32,7 @@ _result = call compile ("extDB3" callExtension _query);
 _data = (_result select 1) select 0;
 _savedMagazines = _data select 0;
 
-_vehicle setVehicleAmmoDef 0;
+_vehicle setVehicleAmmo 0;
 
 if (typeName _savedMagazines isEqualTo "ARRAY") then
 {
