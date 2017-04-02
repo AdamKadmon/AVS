@@ -1,5 +1,5 @@
 /*
-© 2015 Zenix Gaming Ops
+Â© 2015 Zenix Gaming Ops
 Developed by Rod-Serling
 Co-Developed by Vishpala
 
@@ -27,7 +27,7 @@ Notes:
 private ["_currentLoadout", "_magClass", "_turretPath", "_ammoCount", "_inserted", "_magInserted", "_magData"];
 _OK = params
 [
-	["_vehicle", objNull, [objNull]]
+	["_vehicleType", objNull, [objNull]]
 ];
 
 if (!_OK) exitWith
