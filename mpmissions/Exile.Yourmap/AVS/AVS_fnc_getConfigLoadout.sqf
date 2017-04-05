@@ -18,7 +18,7 @@ Return Value:
 
 _OK = params
 [
-	["_vehicleType", "", [""]]
+	["_vehicleType", "", ["String"]]
 ];
 
 if (!_OK) exitWith

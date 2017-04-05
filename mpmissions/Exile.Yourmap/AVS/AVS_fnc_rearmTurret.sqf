@@ -25,4 +25,4 @@ if (!_OK) exitWith
 	diag_log format ["AVS Error: Calling AVS_fnc_rearmTurret with invalid parameters: %1",_this];
 };
 
-_vehicle setVehicleAmmoDef 1;
+_vehicle setVehicleAmmo 1;

@@ -122,7 +122,7 @@ if (hasInterface) then
 					{
 						if (!AVS_rearmActionAdded) then 
 						{
-							_rearmTitle = format ["Rearm: %1 poptabs", _rearmCost];
+							_rearmTitle = format ["<t color='#07F1DC'>Rearm: %1 poptabs", _rearmCost];
 							AVS_rearmAction = player addAction [_rearmTitle, AVS_fnc_requestRearm, [_vehicle]];
 							AVS_previousRearmCost = _rearmCost;
 							AVS_rearmActionAdded = true;
@@ -156,7 +156,7 @@ if (hasInterface) then
 			} 
 			else 							// AVS_RefuelDistance for ground vehicles
 			{
-				AVS_RefuelDist = AVS_RefuelDistance;
+				AVS_RefuelDist = 15;
 				AVS_AirVehicle = false;
 			};
 

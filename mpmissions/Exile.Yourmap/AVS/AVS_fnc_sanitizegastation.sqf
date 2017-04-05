@@ -11,7 +11,7 @@ if (AVS_DisableStockRefuel) then
 // Get gastation locations
 _gastation = nearestobjects [AVS_WorldCenter, AVS_RefuelObjects, AVS_WorldRadius];
 Gastation_locations = [];
-{Gastation_locations = Gastation_locations + [getpos _x]} foreach _gastation;
+{Gastation_locations = Gastation_locations + [getpos _x]} forEach _gastation;
 
 // Sanitize gastation
 {
@@ -19,7 +19,7 @@ Gastation_locations = [];
 	{
 		_x setFuelCargo 0;
 	} forEach _gastationToEmpty;
-} foreach Gastation_locations;
+} forEach Gastation_locations;
 
 	diag_log "Disable Gas Station finished";
 };
