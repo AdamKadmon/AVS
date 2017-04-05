@@ -1,5 +1,5 @@
 /*
-© 2015 Zenix Gaming Ops
+ï¿½ 2015 Zenix Gaming Ops
 Developed by Rod-Serling
 Co-Developed by Vishpala
 

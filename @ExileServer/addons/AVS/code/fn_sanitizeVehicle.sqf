@@ -17,7 +17,7 @@ private ["_vehicleClass", "_vehicleLoadout", "_vehicleWeaponBlacklist", "_vehicl
 
 _OK = params
 [
-	["_vehicle", objNull, [objNull]]
+	["_vehicleObject", objNull, [objNull]]
 ];
 
 if (!_OK) exitWith
@@ -25,7 +25,7 @@ if (!_OK) exitWith
 	diag_log format ["AVS Error: Calling AVS_fnc_sanitizeVehicle with invalid parameters: %1",_this];
 };
 
-_vehicleClass = typeOf _vehicle;
+_vehicleClass = typeOf _vehicleObject;
 _vehicleLoadout = _vehicleClass call AVS_fnc_getConfigLoadout;
 _vehicleWeaponBlacklist = _vehicleClass call AVS_fnc_getBlacklistedWeapons;
 _vehicleAmmoBlacklist = _vehicleClass call AVS_fnc_getBlacklistedAmmo;
@@ -40,9 +40,9 @@ _vehicleAmmoBlacklist = _vehicleClass call AVS_fnc_getBlacklistedAmmo;
 		if (toLower _x in _vehicleWeaponBlacklist) then
 		{
 			_weaponMagazines = (configFile >> "CfgWeapons" >> _x >> "magazines") call BIS_fnc_GetCfgData;
-			_vehicle removeWeaponTurret [_x, _seat];
+			_vehicleObject removeWeaponTurret [_x, _seat];
 			{
-				_vehicle removeMagazinesTurret [_x, _seat];
+				_vehicleObject removeMagazinesTurret [_x, _seat];
 			} forEach _weaponMagazines;
 		};
 	} forEach _seatWeapons;
@@ -51,7 +51,7 @@ _vehicleAmmoBlacklist = _vehicleClass call AVS_fnc_getBlacklistedAmmo;
 	{
 		if (toLower _x in _vehicleAmmoBlacklist) then
 		{
-			_vehicle removeMagazinesTurret [_x, _seat];
+			_vehicleObject removeMagazinesTurret [_x, _seat];
 		}
 	} forEach _seatMagazines;
 } forEach _vehicleLoadout;
@@ -59,22 +59,22 @@ _vehicleAmmoBlacklist = _vehicleClass call AVS_fnc_getBlacklistedAmmo;
 // Sanitize Thermal
 if (AVS_DisableVehicleThermalGlobal || {(toLower _vehicleClass) in AVS_DisableVehicleThermal}) then
 {
-	_vehicle disableTIEquipment true;
+	_vehicleObject disableTIEquipment true;
 };
 // Sanitize NVGs
 if (AVS_DisableVehicleNVGsGlobal || {(toLower _vehicleClass) in AVS_DisableVehicleNVG}) then
 {
-	_vehicle disableNVGEquipment true;
+	_vehicleObject disableNVGEquipment true;
 };
 
 // Disable stock rearm system
 if (AVS_DisableStockRearm) then
 {
-	_vehicle setAmmoCargo 0;
+	_vehicleObject setAmmoCargo 0;
 };
 
 // Disable stock refuel system
 if (AVS_DisableStockRefuel) then
 {
-	_vehicle setFuelCargo 0;
+	_vehicleObject setFuelCargo 0;
 };
