@@ -87,8 +87,8 @@ if (!_worldFound) exitWith
 [
 	['ExileServer_object_player_createBambi', 'exile_server\code\ExileServer_object_player_createBambi.sqf', 'AVS\hooks\AVS_player_createBambi.sqf'],
 	['ExileServer_object_player_database_load', 'exile_server\code\ExileServer_object_player_database_load.sqf', 'AVS\hooks\AVS_player_database_load.sqf'],
-	['ExileServer_object_vehicle_createNonPersistentVehicle', 'exile_server\code\ExileServer_object_vehicle_createNonPersistentVehicle.sqf', 'AVS\hooks\AVS_createNonPersistentVehicle.sqf'],
-	['ExileServer_object_vehicle_createPersistentVehicle', 'exile_server\code\ExileServer_object_vehicle_createPersistentVehicle.sqf', 'AVS\hooks\AVS_createPersistentVehicle.sqf'],
+	//['ExileServer_object_vehicle_createNonPersistentVehicle', 'exile_server\code\ExileServer_object_vehicle_createNonPersistentVehicle.sqf', 'AVS\hooks\AVS_createNonPersistentVehicle.sqf'],
+	//['ExileServer_object_vehicle_createPersistentVehicle', 'exile_server\code\ExileServer_object_vehicle_createPersistentVehicle.sqf', 'AVS\hooks\AVS_createPersistentVehicle.sqf'],
 	['ExileServer_object_vehicle_database_insert', 'exile_server\code\ExileServer_object_vehicle_database_insert.sqf', 'AVS\hooks\AVS_vehicle_database_insert.sqf'],
 	['ExileServer_object_vehicle_database_update', 'exile_server\code\ExileServer_object_vehicle_database_update.sqf', 'AVS\hooks\AVS_vehicle_database_update.sqf'],
 	['ExileServer_object_vehicle_database_load', 'exile_server\code\ExileServer_object_vehicle_database_load.sqf', 'AVS\hooks\AVS_vehicle_database_load.sqf'],
