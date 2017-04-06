@@ -1,5 +1,5 @@
 /*
-© 2015 Zenix Gaming Ops
+Â© 2015 Zenix Gaming Ops
 Developed by Rod-Serling
 Co-Developed by Vishpala
 
@@ -26,7 +26,7 @@ if (!_OK) exitWith
 _totalCost = 0;
 
 // Get our current loadout.
-_currentLoadout = call AVS_fnc_getVehicleLoadout;
+_currentLoadout = _vehicle call AVS_fnc_getVehicleLoadout;
 // Get the full config loadout
 _configLoadout = (typeOf _vehicle) call AVS_fnc_getConfigLoadout;
 
