@@ -6,7 +6,7 @@ Co-Developed by Vishpala
 All rights reserved.
 
 Function:
-	AVS_createPersistentVehicle hook - Redirects Exile function calls to perform AVS functions.
+	AVS_CarefulCreateVehicle hook - Redirects Exile function calls to perform AVS functions.
 */
 
 _vehicleObject = _this call ExileServer_object_vehicle_carefulCreateVehicle_ORIGINAL;
